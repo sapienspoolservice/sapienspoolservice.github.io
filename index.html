@@ -3,11 +3,18 @@
     <head>
         <meta charset="utf-8">
         <title>Sapien's Pool Service</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
         <style>
 		* {
 			margin: 0;
 			padding: 0;
 		}
+		
+		@viewport {
+			width: device-width;
+			zoom: 1.0;
+		}
+		
 		/* adds black background color to the top navigation */
 		.topnav {
 		  background-color: #333;
@@ -70,9 +77,28 @@
 			float: relative;
 			font-size: 3em;
 		}
+		
+		#top_banner_header img {
+			width: 20%;
+		}
+		
 		/* Ends header */
 		
 		/* Begins body */
+		
+		/* Parallax effect */
+		
+		.parallax {
+		  background-image: url("pool2.jpeg");
+		  height: 100%;
+
+		  /* Create the parallax scrolling effect */
+		  background-attachment: fixed;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
+		
 		.bgimg1, .bgimg2, .bgimg3 {
 		  position: relative;
 		  opacity: 0.8;
@@ -96,7 +122,9 @@
 		  background-image: url("pool3.jpeg");
 		  min-height: 300px;
 		}
+		/* End Parallax */
 		
+		/* Contact Us Button */
 		.caption {
 		  position: absolute;
 		  left: 0;
@@ -121,20 +149,8 @@
 		#button:hover {
 			background-color: rgb(92, 158, 196);
 		}
+		/* End button */
 		
-		.parallax {
-		  /* The image used */
-		  background-image: url("pool2.jpeg");
-
-		  /* Full height */
-		  height: 100%;
-
-		  /* Create the parallax scrolling effect */
-		  background-attachment: fixed;
-		  background-position: center;
-		  background-repeat: no-repeat;
-		  background-size: cover;
-		}
 		
 		.intro {
 			background-color: white;
@@ -155,6 +171,142 @@
 			font-size: 1.3em;
 		}
 		
+		
+	@media screen and (max-width: 812px) {
+		/* adds black background color to the top navigation */
+			.topnav {
+			  background-color: #333;
+			  overflow: hidden;
+			  width: 100%;
+			  margin: auto;
+			}
+
+			/* styles the links inside the navigation bar */
+			.topnav a {
+			  float: left;
+			  color: #f2f2f2;
+			  text-align: center;
+			  padding: 14px 0px;
+			  text-decoration: none;
+			  font-size: 1.5em;
+			  width: 25%;
+			  margin: auto;
+			}
+
+			/* Change the color of links on hover */
+			.topnav a:hover {
+			  background-color: rgb(92, 158, 196);
+			  color: white;
+			}
+
+			/* Add a color to the active/current link */
+			.topnav a.active {
+			  background-color: rgb(92, 158, 196);
+			  color: white;
+			}
+			
+			body {
+			  background: rgb(232, 247, 255);
+			  font: 400 1.5em/1.4 "Lato", serif;
+			  height: 100%;
+			}
+			
+			/* Holds body */
+			#container {
+			 width: 100%;
+			 overflow: hidden;
+			 margin: auto;
+			}
+			
+			/* Begins header */
+			#top_banner {
+				width: 100%;
+				text-align: center;
+				margin: auto;
+			}
+			
+			#top_banner_header {
+				width: 90%;
+				overflow: auto;
+				display: inline-block;
+			}
+			
+			#top_banner_header h1 {
+				float: relative;
+				font-size: 3em;
+			}
+			
+			#top_banner_header img {
+				width: 30%;
+			}
+			
+			/* Ends header */
+			
+			/* Begins body */
+			
+			.bgimg1 {
+			  background-image: url("pool1.jpeg");
+			  min-height: 500px;
+			}
+
+			.bgimg2 {
+			  background-image: url("pool2.jpeg");
+			  min-height: 400px;
+			}
+
+			.bgimg3 {
+			  background-image: url("pool3.jpeg");
+			  min-height: 400px;
+			}
+			
+			/* Contact Us Button */
+			.caption {
+			  position: absolute;
+			  left: 0;
+			  top: 50%;
+			  width: 100%;
+			  text-align: center;
+			  color: black;
+			}
+			
+			#button {
+				padding: 25px 50px;
+				background-color: white;
+				width: 20%;
+				opacity: 95%;
+				font-size: 2em;
+				border-radius: 8px;
+				border: 2px solid rgb(92, 158, 196);
+				-webkit-transition-duration: 0.4s;
+				transition-duration: 0.4s;
+			}
+			
+			#button:hover {
+				background-color: rgb(92, 158, 196);
+			}
+			/* End button */
+			
+			
+			.intro {
+				background-color: white;
+				text-align:center;
+				font-size: 1.3em;
+				padding: 30px 10%;
+				text-align: justify;
+			}
+			
+			.intro h1{
+				text-align: center;
+				border-bottom: 2px solid #777;
+			}
+			
+			.t_cell {
+				display: table-cell; 
+				width: 33%;
+				font: 400 1em "Lato", serif;
+			}
+		}
+		
         </style>
     </head>
 	
@@ -171,7 +323,7 @@
 		
 			<div id="top_banner">
 				<div id="top_banner_header">
-					<img src="logo.png" width="10%"/>
+					<img src="logo.png"/>
 					<h1>Sapien's Pool Service</h1>
 				</div>
 			<div class="bgimg1">
@@ -183,9 +335,7 @@
 				<h1>
 					<a id="about">Our Main Goal</a>
 				</h1>
-				"Our business thrives when providing exceptional customer service. Keeping your pool crystal clear is a 
-				priority, as well as maintaining your equipment functioning properly. We are local people that will 
-				never lose the small business touch when providing our services."
+				"Our business thrives when providing exceptional customer service. Keeping your pool crystal clear is a priority, as well as maintaining your equipment functioning properly. We are local people that will never lose the small business touch when providing our services."
 			</div>
 			<div class="bgimg2">	
 			</div>
